@@ -10,7 +10,7 @@ import { FormBuilder, NG_VALUE_ACCESSOR} from '@angular/forms';
   ]
 })
 export class InputComponent extends FieldControlComponent implements OnInit , OnChanges {
-  constructor(protected formBuilder: FormBuilder) { super(formBuilder); }
-  ngOnChanges(changes: SimpleChanges): void {super.ngOnChanges(changes); }
-  ngOnInit(): void {super.ngOnInit(); }
+  constructor(protected override formBuilder: FormBuilder) { super(formBuilder); }
+  override ngOnChanges(changes: SimpleChanges): void {super.ngOnChanges(changes); }
+  override ngOnInit(): void {super.ngOnInit(); }
 }

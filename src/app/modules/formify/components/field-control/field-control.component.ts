@@ -44,7 +44,7 @@ export class FieldControlComponent implements ControlValueAccessor, OnInit , OnC
     });
   }
   ngOnDestroy(): void {
-    this.$unSubscribe.next();
+    this.$unSubscribe.next(false);
     this.$unSubscribe.complete();
   }
   handlePrefix(event: Event): void { this.onPrefix.emit(true); }

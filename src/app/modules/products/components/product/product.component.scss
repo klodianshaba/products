@@ -1,0 +1,49 @@
+@import "src/app/scss/partials/variables";
+
+.product-content {
+  width: 250px;
+  padding: map_get($padding, all);
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  background-color: $background;
+  ::ng-deep.avatar{
+    margin: auto;
+  }
+  .name{
+    font-size: map_get($size,large);
+  }
+  .details{
+    padding: map-get($padding, top);
+    .role, .name{
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+
+    .skeleton-name{
+      width: 80%;
+      height: 20px;
+      background-color: $border-color;
+      margin: auto;
+      border-radius: 6px;
+    }
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: map_get($breakpoints, sm)) {
+  .product-content{
+    width: auto;
+    display: flex;
+    align-items: center;
+    .details{
+      text-align: left;
+      padding: map_get($padding,left-right);
+    }
+    .actions{
+      margin-left: auto;
+      display: grid;
+    }
+  }
+}

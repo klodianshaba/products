@@ -4,6 +4,7 @@ import {State} from "./state/reducers";
 import {selectAllProducts} from "./state/selectors/products.selectors";
 import {ProductService} from "./shared/services/product.service";
 import {loadProducts} from "./state/actions/products.actions";
+import {loadCategories} from "./state/actions/categories.actions";
 
 @Component({
   selector: 'app-root',
@@ -11,17 +12,12 @@ import {loadProducts} from "./state/actions/products.actions";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'crud';
   constructor(private store: Store<State>, private productService: ProductService) {
-    this.store.select(selectAllProducts).subscribe(products => {
-      if(products){
-        console.log(products);
-      }
-    });
-
     this.productService.getProducts().subscribe(products => {
-      console.log(products);
       this.store.dispatch(loadProducts({products:products}));
+    })
+    this.productService.getCategories().subscribe( categories =>{
+      this.store.dispatch(loadCategories({categories:categories}));
     })
   }
 }

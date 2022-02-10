@@ -1,1 +1,24 @@
-<p>product works!</p>
+<div *ngIf="!loading; else loadingskeleton ">
+<div class="product-content" (click)="onClickProduct();productDialog.dialog.show();">
+  <app-avatar src="{{product.image}}"></app-avatar>
+  <div class="details">
+    <div class="name"> <strong>{{product.title}}</strong></div>
+    <div class="role">{{product.category}}</div>
+  </div>
+  <div class="actions">
+    <button mat-icon-button color="primary" (click)="onEditProduct($event); productDialog.dialog.show();"><mat-icon>edit</mat-icon></button>
+    <button mat-icon-button color="warn" (click)="onDeleteProduct($event); confirmDelete.dialog.show()"><mat-icon>delete</mat-icon></button>
+  </div>
+</div>
+<app-confirm-dialog #confirmDelete confirmButtonColor="warn" (onConfirm)="confirmDelete.dialog.hide();onConfirmDelete()" [title]="'Would you like to delete '+ product.title + '?'"></app-confirm-dialog>
+<app-product-dialog #productDialog [product]="product" [displayActions]="displayActions" [direction]="productDirection"></app-product-dialog>
+</div>
+
+<ng-template #loadingskeleton>
+  <div class="product-content">
+    <ngx-skeleton-loader count="1" appearance="circle" [theme]="{height:'100px', width:'100px', 'background-color':'#e6f3ff' }"></ngx-skeleton-loader>
+    <div class="details">
+      <ngx-skeleton-loader count="1" appearance="line" [theme]="{'background-color':'#e6f3ff'}"></ngx-skeleton-loader>
+    </div>
+  </div>
+</ng-template>

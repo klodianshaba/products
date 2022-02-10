@@ -1,1 +1,12 @@
-<p>products works!</p>
+
+<div class="products">
+  <div class="product" *ngFor="let product of products; trackBy: trackByFnCharacters">
+    <app-product [product]="product"></app-product>
+  </div>
+  <div *ngIf="productService.loadingProducts$ | async">
+    <div class="product" *ngFor="let product of [1,2,3,4,5,6,7,8];">
+      <app-product [loading]="true"></app-product>
+    </div>
+  </div>
+</div>
+

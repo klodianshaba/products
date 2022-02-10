@@ -1,0 +1,44 @@
+@import "src/app/scss/partials/variables";
+.toolbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  box-shadow: $shadow;
+  z-index: 2 !important;
+  background-color: $background;
+  .header-content{
+    display: flex;
+    justify-content: space-between;
+    min-width: $max-width;
+    margin: auto;
+    align-items: center;
+  }
+  .title {
+    font-size: map_get($size, xlarge);
+    padding: map-get($padding, left);
+    font-weight: bold;
+  }
+  img {
+    margin: 0 16px;
+  }
+  .spacer {
+    flex: 1;
+  }
+  .navigation-actions{
+    margin-right: 10px;
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: $max-width) {
+  .toolbar {
+    .header-content {
+      min-width: 100%;
+    }
+  }
+}

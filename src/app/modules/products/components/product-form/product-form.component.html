@@ -1,1 +1,18 @@
-<p>product-form works!</p>
+<div class="add-character-content">
+  <div *ngIf="isAdd() || isEdit()">
+    <form [formGroup]="formify.formGroup" #form="ngForm" (ngSubmit)="onSubmit()" [ngClass]="{'loading-form': formify.submit.loading}">
+      <div class="avatar-content">
+        <div>
+          <formify-input formControlName="title" [fieldModel]="formify.field('title')"></formify-input>
+        </div>
+        <app-avatar [src]="isEdit() ? product.image : null " [direction]="AvatarDirections.upload" [required]="formify.formGroup.get('image').invalid && form.submitted" (onPath)="onAvatarPathSelected($event)"></app-avatar>
+      </div>
+      <div class="flex-content">
+        <formify-input formControlName="price" [fieldModel]="formify.field('price')"></formify-input>
+        <formify-select formControlName="category" [fieldModel]="formify.field('category')"></formify-select>
+      </div>
+      <formify-textarea formControlName="description" [fieldModel]="formify.field('description')"></formify-textarea>
+      <formify-submit [submit]="formify.submit"></formify-submit>
+    </form>
+  </div>
+</div>

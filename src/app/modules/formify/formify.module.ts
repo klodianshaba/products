@@ -10,7 +10,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClientModule } from '@angular/common/http';
 import {HttpClient} from '@angular/common/http';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {MaterialModule} from './material.module';
 import {ToggleComponent} from './components/toggle/toggle.component';
 import {RadioComponent } from './components/radio/radio.component';

@@ -7,6 +7,9 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './state/reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ToastrModule} from "ngx-toastr";
+import { CoreModule } from "./core/core.module";
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({}),
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
 export interface RatingModel{
-  rate: string,
+  rate: number,
   count: number
 }

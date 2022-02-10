@@ -1,1 +1,20 @@
-<p>product-dialog works!</p>
+<app-dialog #dialog [config]="dialogConfig" (onHide)="onHide()" >
+  <div header class="title">
+    <strong>{{product.title}}</strong>
+    <div class="buttons">
+      <span class="actions" *ngIf="displayActions">
+        <button mat-icon-button color="warn" (click)="onClickDeleteCharacter(); confirmDelete.dialog.show()"> <mat-icon >delete</mat-icon></button>
+      </span>
+      <button mat-icon-button color="primary" (click)="dialog.hide()"> <mat-icon >close</mat-icon></button>
+    </div>
+  </div>
+  <div body>
+<!--    <app-viewtify-character [product]="product" [direction]="direction" (onUpdated)="dialog.hide()"></app-viewtify-character>-->
+    <app-product-form  [product]="product" [direction]="direction" (onUpdated)="dialog.hide()"></app-product-form>
+  </div>
+  <div footer>
+  </div>
+</app-dialog>
+
+<app-confirm-dialog #confirmDelete confirmButtonColor="warn" (onConfirm)="dialog.hide();confirmDelete.dialog.hide();onConfirmDelete()" [title]="'Would you like to delete '+ product.title + '?'"></app-confirm-dialog>
+

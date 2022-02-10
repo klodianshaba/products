@@ -16,7 +16,7 @@ export class GroupModel extends FormifyGenerate implements FormifyAccessibility{
   readonly controlType: ControlTypes;
   change: BehaviorSubject<any>;
   label: string;
-  public submit: SubmitModel;
+  public override submit: SubmitModel;
   constructor( config: GroupState ) {
     super();
     this.controlName = '';

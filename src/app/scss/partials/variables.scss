@@ -1,0 +1,35 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$padding:(
+  all: 10px,
+  top: 10px 0 0 0,
+  left: 0 0 0 10px,
+  bottom: 0 0 10px 0,
+  right: 0 10px 0 0,
+  top-bottom: 10px 0,
+  left-right: 0 10px,
+  top-left-right: 10px 10px 0 10px,
+  bottom-left-right: 0 10px 10px 10px,
+  top-left-bottom-right: 10px 10px 10px 10px,
+);
+
+$size:(
+  small: 12px,
+  middle: 14px,
+  large: 16px,
+  xlarge: 18px,
+);
+
+$shadow: 0px 0px 8px 8px #e6f3ff;
+
+$border-color: #e6f3ff;
+
+$max-width: 880px;
+
+$background: aliceblue;

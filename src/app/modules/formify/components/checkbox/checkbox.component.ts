@@ -8,7 +8,7 @@ import {FormBuilder, NG_VALUE_ACCESSOR} from '@angular/forms';
   providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => CheckboxComponent) , multi: true }]
 })
 export class CheckboxComponent extends FieldControlComponent implements OnInit , OnChanges {
-  constructor(protected formBuilder: FormBuilder) { super(formBuilder); }
-  ngOnChanges(changes: SimpleChanges): void {super.ngOnChanges(changes); }
-  ngOnInit(): void { super.ngOnInit(); }
+  constructor(protected override formBuilder: FormBuilder) { super(formBuilder); }
+  override ngOnChanges(changes: SimpleChanges): void {super.ngOnChanges(changes); }
+  override ngOnInit(): void { super.ngOnInit(); }
 }

@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import "app/scss/scrollbar";
+@import "app/scss/partials/variables";
+html, body {
+  overflow: visible;
+}
+body {
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: linear-gradient(180.01deg, $background 0.01%, rgb(255, 255, 255) 90.37%), rgb(255, 255, 255);
+  min-height: 100vh;
+}

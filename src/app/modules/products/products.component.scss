@@ -1,0 +1,30 @@
+@import "src/app/scss/partials/variables";
+.products{
+  text-align: center;
+  .product{
+    text-align: center;
+    //margin-top: 10px;
+    //margin-bottom: 20px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  .product:hover{
+    transition: 0.3s;
+    transform: translateY(-3px);
+    box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+  }
+}
+/* Responsive Styles */
+@media screen and (max-width: map_get($breakpoints, sm)) {
+  .products{
+    .product{
+      margin: 0;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+}

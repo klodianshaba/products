@@ -103,16 +103,20 @@ export class FieldModel extends FormifyAccessibility{
   update(overwrite: FieldState): void {
     Object.assign(this, overwrite);
   }
-  field(path: string): FieldModel | null {
+
+  override field(path: string): FieldModel | null {
    return null;
   }
-  group(path: string): GroupModel | null {
+
+  override group(path: string): GroupModel | null {
     return null;
   }
-  array(path: string): ArrayModel | null {
+
+  override array(path: string): ArrayModel | null {
     return null;
   }
-  get(path: string): FieldModel | GroupModel | ArrayModel | null {
+
+  override get(path: string): FieldModel | GroupModel | ArrayModel | null {
     return null;
   }
 }

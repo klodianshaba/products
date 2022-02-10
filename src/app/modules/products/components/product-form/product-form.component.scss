@@ -1,0 +1,76 @@
+@import "src/app/scss/partials/variables";
+@import "../../../../scss/partials/functions";
+@import "../../../../scss/partials/mixins";
+.add-character-content {
+  width: auto;
+  padding: map-get($padding, top-bottom);
+  .avatar-content {
+    display: flex;
+    justify-content: space-between;
+    > div{
+      width: calc(100% - 130px);
+    }
+    .createdAt{
+      padding-top: 5px;
+    }
+  }
+  .flex-content{
+    display: flex;
+    justify-content: space-between;
+    formify-input, formify-select, tagify{
+      width: calc( 50% - 10px );
+    }
+  }
+  ::ng-deep .tagify{
+    margin-bottom: 10px;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+.error-icon{
+  color:red;
+}
+.dropDownIconInPrefix{
+  position: relative;
+  top: 6px;
+}
+
+.tags-content{
+  padding: map_get($padding,bottom);
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: $border-color !important;
+}
+
+::ng-deep .organization-hashtags-content .tagify__input{
+  //--placeholder-color: ;
+  --placeholder-color-focus: #673ab7;
+}
+
+::ng-deep .tagify{
+  --tags-border-color:empty;
+  --tags-focus-border-color:#673ab7;
+  border-bottom: 1px solid $border-color;
+}
+
+::ng-deep .tagify__tag > div{
+  border-radius: 10px;
+}
+
+::ng-deep .invalid-tagify .tagify{
+  .tagify__input::before{
+    color:  red;
+  }
+  border-bottom:1px solid red;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: $max-width) {
+  .add-character-content{
+    min-width: 100%;
+  }
+}
