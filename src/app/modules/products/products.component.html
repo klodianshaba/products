@@ -1,6 +1,6 @@
 
 <div class="products">
-  <div class="product" *ngFor="let product of products; trackBy: trackByFnCharacters">
+  <div class="product" [@fadeIn] *ngFor="let product of products; trackBy: trackByFnCharacters">
     <app-product [product]="product"></app-product>
   </div>
   <div *ngIf="productService.loadingProducts$ | async">

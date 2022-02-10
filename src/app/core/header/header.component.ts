@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {zoomIn } from "ngxa";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations: [
+    zoomIn({direction: 'Down', timings:'500ms', translate:'100px'})
+  ]
 })
 export class HeaderComponent implements OnInit {
 

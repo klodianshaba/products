@@ -17,11 +17,12 @@
     min-width: $max-width;
     margin: auto;
     align-items: center;
+    //padding: map-get($padding, left-right);
   }
   .title {
     font-size: map_get($size, xlarge);
-    padding: map-get($padding, left);
     font-weight: bold;
+    padding: map-get($padding, left-right);
   }
   img {
     margin: 0 16px;
@@ -30,7 +31,7 @@
     flex: 1;
   }
   .navigation-actions{
-    margin-right: 10px;
+    padding: map-get($padding, left-right);
   }
 }
 

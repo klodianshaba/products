@@ -3,7 +3,7 @@
 @import "../../../../scss/partials/mixins";
 .add-character-content {
   width: auto;
-  padding: map-get($padding, top-bottom);
+  padding: map-get($padding, all);
   .avatar-content {
     display: flex;
     justify-content: space-between;
@@ -70,7 +70,5 @@
 
 /* Responsive Styles */
 @media screen and (max-width: $max-width) {
-  .add-character-content{
-    min-width: 100%;
-  }
+
 }

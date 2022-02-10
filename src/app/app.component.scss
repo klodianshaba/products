@@ -23,7 +23,9 @@ p {
   max-width: $max-width;
   flex-direction: column;
   align-items: center;
-
+  ::ng-deep app-product-form{
+    width: 100%;
+  }
 }
 
 
