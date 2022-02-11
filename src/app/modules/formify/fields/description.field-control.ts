@@ -2,10 +2,10 @@ import {FieldModel, FieldState, FieldTypes, ValidatorModel} from '../models';
 import {Validators} from '@angular/forms';
 export class DescriptionFieldControl extends FieldModel {
   constructor(overwrite: FieldState  = {}) {
-    const  field: FieldModel = new FieldModel({
+    const field: FieldModel = new FieldModel({
       controlName: 'description',
       fieldType : FieldTypes.textarea,
-      label: 'Enter role description',
+      label: 'Enter description',
       placeholder: 'description',
       autoComplete: 'off',
       validators: [
