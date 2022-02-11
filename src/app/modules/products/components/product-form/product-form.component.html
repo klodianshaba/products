@@ -1,4 +1,7 @@
-<div class="add-character-content">
+
+<app-direction label="Add Product" *ngIf="isAdd()"></app-direction>
+
+<div class="add-product-content" [@fadeIn]>
   <div *ngIf="isAdd() || isEdit()">
     <form [formGroup]="formify.formGroup" #form="ngForm" (ngSubmit)="onSubmit()" [ngClass]="{'loading-form': formify.submit.loading}">
       <div class="avatar-content">

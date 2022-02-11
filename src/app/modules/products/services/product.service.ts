@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpEvent, HttpEventType} from "@angular/common/http";
 import {BehaviorSubject, defer, Observable, map, catchError, throwError, finalize} from "rxjs";
-import {ProductModel} from "../../models";
-export interface RequestProgressInterface {
-  upload: BehaviorSubject<number>;
-  download: BehaviorSubject<number>;
-}
+import {ProductModel, RequestProgressInterface} from "../../../models";
+
 @Injectable({
   providedIn: 'root'
 })

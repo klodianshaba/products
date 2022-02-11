@@ -28,8 +28,12 @@ $size:(
 
 $shadow: 0px 0px 8px 8px #cce6ff;
 
+$shadow-white: 0px 0px 8px 8px white;
+
 $border-color: #b3d9ff;
 
 $max-width: 880px;
 
-$background:#cce6ff;
+$background: #cce6ff;
+
+$linear-background: linear-gradient(180.01deg, $background 0.01%, white 90.37%), white;

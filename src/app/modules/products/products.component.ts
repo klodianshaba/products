@@ -3,7 +3,7 @@ import {ProductModel} from "../../models";
 import {Store} from "@ngrx/store";
 import {State} from "../../state/reducers";
 import {selectAllProducts} from "../../state/selectors/products.selectors";
-import {ProductService} from "../../shared/services/product.service";
+import {ProductService} from "./services/product.service";
 import {fadeIn} from "ngxa";
 @Component({
   selector: 'app-products',

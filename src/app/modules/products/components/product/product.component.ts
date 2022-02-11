@@ -5,7 +5,7 @@ import {ProductModel} from "../../../../models";
 import {ToastrService} from "ngx-toastr";
 import {deleteProduct} from "../../../../state/actions/products.actions";
 import {ProductDirectionsEnum} from "../../../../shared/utils";
-import {ProductService} from "../../../../shared/services/product.service";
+import {ProductService} from "../../services/product.service";
 
 @Component({
   selector: 'app-product',

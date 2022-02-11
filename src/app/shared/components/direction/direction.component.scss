@@ -1,0 +1,19 @@
+@import "src/app/scss/partials/variables";
+.direction{
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  border-bottom: 1px solid $border-color;
+  align-items: center;
+  margin: 0 10px 20px 10px;
+  .title{
+    font-size: map_get($size,large);
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: $max-width) {
+  .direction{
+    margin: 0 0 20px 0;
+  }
+}

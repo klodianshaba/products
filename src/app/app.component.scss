@@ -8,14 +8,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 8px 0;
-}
-
-p {
-  margin: 0;
-}
-
 .content {
   display: flex;
   margin: 20px auto 32px;
@@ -28,27 +20,9 @@ p {
   }
 }
 
-
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 16px;
-}
-
 /* Responsive Styles */
 @media screen and (max-width: map_get($breakpoints, sm)) {
-
   .content{
     align-items: unset;
   }
-  .button-container > *:not(.circle-link) ,
-  .terminal {
-    width: 100%;
-  }
-
-  .card.highlight-card span {
-    margin-left: 10px;
-  }
-
 }

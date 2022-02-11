@@ -4,9 +4,9 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: $background;
+  background-color: white;
   padding: 10px 0;
-  border-top: 1px solid $border-color;
+  box-shadow: $shadow-white;
   strong{
     font-size: map_get($size, large);
   }
@@ -17,7 +17,6 @@
     max-width: $max-width;
     margin: auto;
     align-items: center;
-    padding: map-get($padding, left-right);
   }
 }
 .footer{

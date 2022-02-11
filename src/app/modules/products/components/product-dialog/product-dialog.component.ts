@@ -1,13 +1,13 @@
 import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import {ToastrService} from "ngx-toastr";
 import {DialogConfig} from "../../../dialog/models";
-import {deleteProduct, editProduct} from "../../../../state/actions/products.actions";
+import {deleteProduct} from "../../../../state/actions/products.actions";
 import {Store} from "@ngrx/store";
 import {State} from "../../../../state/reducers";
 import {DialogComponent} from "../../../dialog/dialog.component";
 import {ProductModel} from "../../../../models";
 import {ProductDirectionsEnum} from "../../../../shared/utils";
-import {ProductService} from "../../../../shared/services/product.service";
+import {ProductService} from "../../services/product.service";
 
 @Component({
   selector: 'app-product-dialog',
@@ -24,7 +24,6 @@ export class ProductDialogComponent implements OnInit {
   @Output() statusChange = new EventEmitter();
   @Output() onEdit: EventEmitter<ProductModel> = new EventEmitter();
   public dialogConfig: DialogConfig = { padding: false};
-  public CharacterDirections = ProductDirectionsEnum;
 
   constructor(
     private toastr: ToastrService,
@@ -36,27 +35,6 @@ export class ProductDialogComponent implements OnInit {
 
   onHide() {
     this.statusChange.emit(false);
-  }
-
-  isEdit(): boolean{
-    return (this.direction === ProductDirectionsEnum.edit)
-  }
-  isView(): boolean{
-    return (this.direction === ProductDirectionsEnum.view)
-  }
-
-  onEditCharacter(): void {
-    this.store.dispatch(editProduct({product: this.product}));
-    this.onEdit.emit(this.product);
-  }
-
-  onClickDeleteCharacter(): void{
-  }
-  onClickEditCharacter(): void{
-    this.direction = ProductDirectionsEnum.edit;
-  }
-  onClickVisibleCharacter(): void{
-    // this.direction = CharacterDirections.view;
   }
 
   onConfirmDelete(): void{

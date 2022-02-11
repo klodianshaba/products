@@ -5,22 +5,20 @@
   padding: map_get($padding, all);
   border: 1px solid $border-color;
   border-radius: 5px;
-  background-color: $background;
   ::ng-deep.avatar{
     margin: auto;
   }
-  .name{
+  .title{
     font-size: map_get($size,large);
   }
   .details{
     padding: map-get($padding, top);
-    .role, .name{
+    .category, .title{
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
     }
-
     .skeleton-name{
       width: 80%;
       height: 20px;

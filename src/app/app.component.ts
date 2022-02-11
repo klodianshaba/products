@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import {State} from "./state/reducers";
 import {selectAllProducts} from "./state/selectors/products.selectors";
-import {ProductService} from "./shared/services/product.service";
+import {ProductService} from "./modules/products/services/product.service";
 import {loadProducts} from "./state/actions/products.actions";
 import {loadCategories} from "./state/actions/categories.actions";
 
