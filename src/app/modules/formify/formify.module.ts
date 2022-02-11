@@ -11,7 +11,7 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClientModule } from '@angular/common/http';
 import {HttpClient} from '@angular/common/http';
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
-import {MaterialModule} from './material.module';
+import {MaterialModule} from "../material/material.module";
 import {ToggleComponent} from './components/toggle/toggle.component';
 import {RadioComponent } from './components/radio/radio.component';
 import {ArrayControlComponent } from './components/array-control/array-control.component';
