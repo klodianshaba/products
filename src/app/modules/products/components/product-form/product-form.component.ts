@@ -40,7 +40,7 @@ export class ProductFormComponent implements OnInit {
       new PriceFieldControl({}),
       new DescriptionFieldControl({}),
       new AvatarFieldControl({controlName:'image'}),
-      new CategoryFieldControl({options:[{value:'men',text:'Men'}]})
+      new CategoryFieldControl({})
     ],
     submit: { text: 'Save'}
   });
@@ -52,9 +52,9 @@ export class ProductFormComponent implements OnInit {
     private productService: ProductService
   ) {
     this.product = {...this.product, ...this.formify.formGroup.value}
-    this.store.select(selectAllProducts).subscribe(characters => {
-      if(characters) {
-        this.products = characters;
+    this.store.select(selectAllProducts).subscribe(products => {
+      if(products) {
+        this.products = products;
       }
     });
 

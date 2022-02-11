@@ -9,7 +9,7 @@ export interface CategoriesState {
 }
 
 export const initialState: CategoriesState = {
-  categories: []
+  categories: ['electronics', 'jewelery']
 };
 
 export const categoriesReducer = createReducer(
