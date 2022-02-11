@@ -1,4 +1,5 @@
 @import "src/app/scss/partials/variables";
+@import "src/app/scss/partials/mixins";
 .toolbar {
   position: sticky;
   top: 0;
@@ -23,6 +24,7 @@
     font-size: map_get($size, xlarge);
     font-weight: bold;
     padding: map-get($padding, left-right);
+    @include cursor-pointer();
   }
   img {
     margin: 0 16px;
