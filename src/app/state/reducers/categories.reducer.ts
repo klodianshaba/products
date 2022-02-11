@@ -1,5 +1,4 @@
-import { Action, createReducer, on } from '@ngrx/store';
-import {loadProducts} from "../actions/products.actions";
+import {createReducer, on } from '@ngrx/store';
 import {loadCategories} from "../actions/categories.actions";
 
 export const categoriesFeatureKey = 'categories';

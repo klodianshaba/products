@@ -7,8 +7,8 @@
       <div class="price">{{product.price}} $</div>
     </div>
     <div class="actions">
-      <button mat-icon-button color="primary" (click)="onEditProduct($event); productDialog.dialog.show();"><mat-icon>edit</mat-icon></button>
-      <button mat-icon-button color="warn" (click)="onDeleteProduct($event); confirmDelete.dialog.show()"><mat-icon>delete</mat-icon></button>
+      <button aria-label="Edit" mat-icon-button color="primary" (click)="onEditProduct($event); productDialog.dialog.show();"><mat-icon>edit</mat-icon></button>
+      <button aria-label="Delete" mat-icon-button color="warn" (click)="onDeleteProduct($event); confirmDelete.dialog.show()"><mat-icon>delete</mat-icon></button>
     </div>
   </div>
   <app-confirm-dialog #confirmDelete confirmButtonColor="warn" (onConfirm)="confirmDelete.dialog.hide();onConfirmDelete()" [title]="'Would you like to delete '+ product.title + '?'"></app-confirm-dialog>
